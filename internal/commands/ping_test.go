@@ -3,7 +3,6 @@ package commands
 import (
 	"context"
 	"fmt"
-	"os"
 	"sensei/internal/discord"
 	"testing"
 
@@ -13,8 +12,6 @@ import (
 )
 
 func TestServer_Ping(t *testing.T) {
-	os.Setenv("COMMAND_PREFIX", "!")
-
 	tests := []struct {
 		name      string
 		setupMock func(*discord.MockSession)
