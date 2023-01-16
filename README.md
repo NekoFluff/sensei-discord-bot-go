@@ -1,4 +1,4 @@
-[![Go](https://github.com/NekoFluff/go-youtube-notification-bot/actions/workflows/go.yml/badge.svg)](https://github.com/NekoFluff/go-youtube-notification-bot/actions/workflows/go.yml)
+[![Go](https://github.com/NekoFluff/sensei-discord-bot-go/actions/workflows/go.yml/badge.svg)](https://github.com/NekoFluff/sensei-discord-bot-go/actions/workflows/go.yml)
 
 # Use
 
