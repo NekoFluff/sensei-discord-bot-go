@@ -60,7 +60,7 @@ func Leave(log *logrus.Entry) discord.Command {
 				return
 			}
 
-			err = respondToInteraction(s, i.Interaction, fmt.Sprintf("You've been removed."))
+			err = respondToInteraction(s, i.Interaction, "You've been removed.")
 			if err != nil {
 				log.Println(err)
 			}

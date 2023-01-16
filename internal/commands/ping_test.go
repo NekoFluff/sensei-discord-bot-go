@@ -1,6 +1,7 @@
 package commands
 
 import (
+	"context"
 	"fmt"
 	"os"
 	"sensei/internal/discord"
@@ -8,6 +9,7 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	gomock "github.com/golang/mock/gomock"
+	"github.com/sirupsen/logrus"
 )
 
 func TestServer_Ping(t *testing.T) {
@@ -35,10 +37,11 @@ func TestServer_Ping(t *testing.T) {
 		ctrl := gomock.NewController(t)
 		defer ctrl.Finish()
 
+		log := logrus.New().WithContext(context.TODO())
 		session := discord.NewMockSession(ctrl)
 		tt.setupMock(session)
 
-		ping := Ping(nil)
+		ping := Ping(log)
 		ping.Handler(session, &discordgo.InteractionCreate{
 			Interaction: &discordgo.Interaction{
 				ChannelID: "test-channel-id",

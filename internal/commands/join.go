@@ -55,7 +55,7 @@ func Join(log *logrus.Entry) discord.Command {
 				return
 			}
 
-			err = respondToInteraction(s, i.Interaction, fmt.Sprintf("You've been added."))
+			err = respondToInteraction(s, i.Interaction, "You've been added.")
 			if err != nil {
 				log.Println(err)
 			}
